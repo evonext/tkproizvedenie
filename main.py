@@ -26,6 +26,7 @@ def calculate():
     entry_result.config(state='disable')
 
 def clear():
+    entry_result.config(state='normal')
     entry_result.delete(0, END)
     entry_result.config(text="")
 
@@ -37,7 +38,7 @@ combobox = ttk.Combobox(root, textvariable=selected_loop, values= ['for', 'while
 
 label_entry = Label(root, text="Введите целое число")
 entry=Entry(root, width=20)
-entry_result=Entry(root, width=20,state='disable')
+entry_result=Entry(root, width=20)
 label_result=Label(root, text="Сумма цифр данного числа:")
 execute_Button= Button(root, text="Выполнить", command=calculate)
 clear_Button= Button(root, text="Очистить", command=clear)
